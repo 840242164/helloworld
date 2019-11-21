@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <title>main</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" charset="utf-8"> 
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js" charset="utf-8"></script>
+    <!--script src="https://cdn.bootcss.com/heatmap.js/2.0.2/heatmap.min.js"></script-->
+    <script src="js/heatmap.js-2.0.5/heatmap.js-2.0.5/build/heatmap.js"></script>
+</head>
+<body>
+    <h1 id="t1">智能交通指导系统</h1>
+    <div id="box">
+        <p class="item1">热力图</p>
+        <!--p class="item2">车流量/人流量情况</p-->
+        <p class="item3">查询</p>
+    </div>
+    <!--车流量热力图-->
+    <div id="relitu"> 
+        <div class="heatmap1">
+            <h2 id="c2">车流量热力图</h2>
+            <img id="map1" src = "img/scau-add.jpg">  
+        </div>
+        <!--人流量热力图-->
+        <div class="heatmap2">
+            <h2 id="r2">人流量热力图</h2>
+            <img id="map2" src = "img/scau-add.jpg">  
+        </div>
+        <!--文字数据，包括人流量数字，阈值等-->
+        <div id="app" v-cloak>    <!--是否要用两个id，传两个vue实例-->   
+            <table id="c1">
+                <thead>
+                <tr><th>地点</th><th>车辆数量</th><th>行人数量</th><th>时间</th></tr>
+                </thead>
+                <tbody>
+                    <!--怎么显示doll的属性-->
+                <tr><td>11{{doll.place}}</td><td>5g{{self[i].car_num}}</td><td>yhj{{self.state_1}}</td><td>gff{{self.time}}</td></tr>
+                <tr><td>2{{self.place_2}}</td><td>gh{{self.num_2}}</td><td>{{self.state_2}}</td><td>{{self.time}}</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>  
+<!--div id="che-or-ren">   
+</div-->
+<div id="chaxun">
+    <!--这里可以用flex布局,在这里做查询的页面，要提交表单吗？发过去吗？还是查记录？-->
+    <button class="button">Click</button>
+    <!--show 图片？-->
+</div>
+
+</body>
+<script src='js/main.js'></script>
+<script src='js/heatmap1.js'></script>
+</html>
